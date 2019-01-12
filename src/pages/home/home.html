@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-title >
+        VISITED LOCATIONS: {{visited}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+              <p>Current location</p>
+              <p>Lat: {{ lat }}</p>
+              <p>Lng: {{ lng }}</p> 
+          </ion-col>
+          <ion-col col-3 offset-3>
+              <p>Destination point</p>
+              <p id="lat">Lat: </p>
+              <p id="lng">Lng: </p>    
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+  <!-- <ion-item>
+    <ion-label floating>URL</ion-label>
+    <ion-input type="url" [(ngModel)]="url"></ion-input>
+  </ion-item> -->
+<div>
+  <button ion-button (click)="openWebpage(url)">Navigate</button>
+  <button ion-button (click)="getLocation()">New Destination</button>
+  <button ion-button id="done" (click)="getDistance()">I'M IN PLACE</button>
+  <button ion-button id="cheat" (click)="turnCheatOn()" color="danger">CHEAT ON</button>
+</div>
+
+
+
+  <iframe id="fm" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
+  </iframe></ion-content>
+
+  
